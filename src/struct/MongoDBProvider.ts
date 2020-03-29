@@ -1,5 +1,5 @@
 import { MongoClient, InsertOneWriteOpResult, UpdateWriteOpResult, DeleteWriteOpResultObject } from "mongodb";
-import { Provider, CachedProvider, GungnirError } from "@gungnir/core";
+import { Provider, CachedProviderConstructor, GungnirError } from "@gungnir/core";
 
 function connectMongo(uri: string): Promise<MongoClient> {
 	return new Promise((resolve, reject) => {
@@ -67,7 +67,7 @@ async function clearData(client: MongoClient, table: string, id: string) {
 const CLIENT_NOT_READY = "the MongoDB client isn't connected, use 'MongoDBProvider.connect(uri: string)'.";
 
 export class MongoDBProvider extends Provider {
-	declare public static readonly cached: CachedProvider<typeof MongoDBProvider>;
+	declare public static readonly cached: CachedProviderConstructor<typeof MongoDBProvider>;
 	
 	#mongoClient: MongoClient | null = null;
 	public constructor(public readonly uri: string) {
