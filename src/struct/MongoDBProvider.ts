@@ -67,7 +67,7 @@ async function clearData(client: MongoClient, table: string, id: string) {
 const CLIENT_NOT_READY = "the MongoDB client isn't connected, use 'MongoDBProvider.connect(uri: string)'.";
 
 export class MongoDBProvider extends Provider {
-	declare public static readonly cached: CachedProviderConstructor<typeof MongoDBProvider>;
+	public static readonly cached = CachedProviderConstructor(MongoDBProvider);
 	
 	#mongoClient: MongoClient | null = null;
 	public constructor(public readonly uri: string) {

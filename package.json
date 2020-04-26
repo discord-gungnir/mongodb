@@ -1,6 +1,6 @@
 {
   "name": "@gungnir/mongodb",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A Gungnir addon that adds a MongoDB Provider.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/discord-gungnir/mongodb#readme",
   "dependencies": {
-    "@gungnir/core": "^1.1.5",
+    "@gungnir/core": "^1.1.7",
     "@types/mongodb": "^3.5.11",
     "mongodb": "^3.5.6"
   }
