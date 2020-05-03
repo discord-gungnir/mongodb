@@ -1,6 +1,6 @@
 {
   "name": "@gungnir/mongodb",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A Gungnir addon that adds a MongoDB Provider.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
